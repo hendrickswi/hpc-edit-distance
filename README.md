@@ -10,3 +10,4 @@ in memory, increasing cache locality.
 
 In the end, these optimizations achieved a 38x speedup on large datasets of 500k characters compared to the baseline, which improves further as datasets grow.
 main.c is essentially a benchmarking tool used to verify correctness (compared to the known naive implementation) and show performance.
+A Makefile is included for testing purposes. Run ````make main```` to run the main program. ````make test```` will run the initial test file.
