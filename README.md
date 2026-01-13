@@ -7,7 +7,7 @@ The next optimization attempted is present in ````parallelized_edit_distance.c``
 The final series of optimizations are present in ````avx2_edit_distance.c````, which utilizies AVX2 SIMD instructions to compute vectors of eight values at once. This implementation also features loop unrolling and a diagonal-major optimization, which lends itself particularly well to vectorization due to placing dependent data contiguously in memory, increasing cache locality.
 
 
-In the end, ````avx2_edit_distance()```` achieved a 38x speedup on large datasets of 500k characters compared to ````naive_edit_distance````, which improves further as datasets grow. Additionally, for large datasets of 1 million characters, ````avx2_edit_distance()```` achieved a median 5.9x speedup compared to that of ````parallelized_edit_distance()````.
+In the end, ````avx2_edit_distance()```` achieved a 38x speedup on large datasets of 500k characters compared to ````naive_edit_distance()````, which improves further as datasets grow. Additionally, for large datasets of 1 million characters, ````avx2_edit_distance()```` achieved a median 5.9x speedup compared to that of ````parallelized_edit_distance()````.
 
 ````main.c```` is essentially a benchmarking tool used to verify correctness (compared to the known naive implementation) and show performance.
 A Makefile is included for testing purposes. Run ````make main```` to run the main program. ````make test```` will run the initial test file.
