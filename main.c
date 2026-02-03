@@ -10,7 +10,7 @@
 #include "src/parallelized_edit_distance.h"
 #include "src/avx2_edit_distance.h"
 
-static const size_t n = 500000;
+static const size_t n = 100000;
 static const char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
